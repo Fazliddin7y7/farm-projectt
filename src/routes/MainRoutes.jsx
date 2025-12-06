@@ -12,6 +12,8 @@ import OurHistory from "../pages/pages/OurHistory";
 import Team from "../pages/pages/OurTeamMember";
 import Faq from "../pages/pages/FAQ";
 import Services from "../pages/services/Services";
+import Portfolio2 from "../pages/portfolio/PortfolioGrid2";
+import ServiceDetails from "../pages/services/ServiceDetails";
 
 
 
@@ -31,6 +33,10 @@ const MainRoutes = () => {
      <Route path={ROUTES.TEAM} element={<Team />} />;
      <Route path={ROUTES.FAQ} element={<Faq />} />;
      <Route path={ROUTES.SERVICES} element={<Services />} />;
+     <Route path={ROUTES.PORTFOLIO2} element={<Portfolio2 />} />;
+     <Route path={ROUTES.SERVICEDETAILS} element={<ServiceDetails />} />;
+
+
 
 
 

@@ -372,7 +372,7 @@ export default function Header() {
       hasDropdown: true,
       dropdownItems: [
         { to: ROUTES.SERVICES, label: "Services" },
-        { to: ROUTES.SERVICE_DETAILS, label: "Service Details" }
+        { to: ROUTES.SERVICEDETAILS, label: "Service Details" }
       ],
       isActive: location.pathname.includes("services")
     },
@@ -380,7 +380,7 @@ export default function Header() {
       name: "PORTFOLIO",
       hasDropdown: true,
       dropdownItems: [
-        { to: ROUTES.PORTFOLIO_GRID2, label: "Portfolio Grid 2" },
+        { to: ROUTES.PORTFOLIO2, label: "Portfolio Grid 2" },
         { to: ROUTES.PORTFOLIO_GRID3, label: "Portfolio Grid 3" },
         { to: ROUTES.PORTFOLIO_GRID4, label: "Portfolio Grid 4" }
       ],

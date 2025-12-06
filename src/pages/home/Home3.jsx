@@ -1,5 +1,6 @@
 import React from "react";
 import HeaderHome3 from "../../components/HeaderHome3";
+import Header from "../../components/Header";
 import styled from "styled-components";
 import Footer from "../../components/Footer";
 
@@ -897,7 +898,7 @@ export default function Home3() {
   return (
     <BigContainer>
       <HeaderWrapper>
-        <HeaderHome3 />
+        <Header />
       </HeaderWrapper>
 
       {/* HEADER SECTION */}
