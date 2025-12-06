@@ -787,7 +787,7 @@ const FarmingText = styled.p`
 `;
 
 const FarmingBtn = styled.button`
-  width: 200px;
+  width: 201px;
   border: none;
   background: #5b8c51;
   color: white;
