@@ -1,4 +1,4 @@
-import { BrowserRouter as Router, Routes, Route } from "react-router";
+import { Routes, Route } from "react-router-dom";
 import ROUTES from "./routes";
 
 // Import Pages
@@ -23,14 +23,14 @@ import Services from "../pages/services/Services";
 const MainRoutes = () => {
   return (
     <Routes>
-     <Route path={ROUTES.HOME1} element={<Home1 />} />;
-     <Route path={ROUTES.HOME2} element={<Home2 />} />;
-     <Route path={ROUTES.HOME3} element={<Home3 />} />;
-     <Route path={ROUTES.ABOUT} element={<About />} />;
-     <Route path={ROUTES.HISTORY} element={<OurHistory />} />;
-     <Route path={ROUTES.TEAM} element={<Team />} />;
-     <Route path={ROUTES.FAQ} element={<Faq />} />;
-     <Route path={ROUTES.SERVICES} element={<Services />} />;
+     <Route path={ROUTES.HOME1} element={<Home1 />} />
+     <Route path={ROUTES.HOME2} element={<Home2 />} />
+     <Route path={ROUTES.HOME3} element={<Home3 />} />
+     <Route path={ROUTES.ABOUT} element={<About />} />
+     <Route path={ROUTES.HISTORY} element={<OurHistory />} />
+     <Route path={ROUTES.TEAM} element={<Team />} />
+     <Route path={ROUTES.FAQ} element={<Faq />} />
+     <Route path={ROUTES.SERVICES} element={<Services />} />
 
 
 
