@@ -35,7 +35,7 @@ export default function HeaderHome3() {
             onMouseEnter={() => openWithDelay("home")}
             onMouseLeave={closeWithDelay}
           >
-            <LinkItem2>HOME</LinkItem2>
+            <PlainLink>HOME</PlainLink>
             {openMenu === "home" && (
               <Dropdown2>
                 <DropLink2 to={ROUTES.HOME1}>Home 1</DropLink2>
@@ -52,7 +52,7 @@ export default function HeaderHome3() {
             onMouseEnter={() => openWithDelay("pages")}
             onMouseLeave={closeWithDelay}
           >
-            <LinkItem2>PAGES</LinkItem2>
+            <PlainLink>PAGES</PlainLink>
             {openMenu === "pages" && (
               <Dropdown2>
                 <DropLink2 to={ROUTES.HOME1}>Home 1</DropLink2>
@@ -69,7 +69,7 @@ export default function HeaderHome3() {
             onMouseEnter={() => openWithDelay("services")}
             onMouseLeave={closeWithDelay}
           >
-            <LinkItem2>SERVICES</LinkItem2>
+            <PlainLink>SERVICES</PlainLink>
             {openMenu === "services" && (
               <Dropdown2>
                 <DropLink2>SMM Services</DropLink2>
@@ -86,7 +86,7 @@ export default function HeaderHome3() {
             onMouseEnter={() => openWithDelay("portfolio")}
             onMouseLeave={closeWithDelay}
           >
-            <LinkItem2>PORTFOLIO</LinkItem2>
+            <PlainLink>PORTFOLIO</PlainLink>
             {openMenu === "portfolio" && (
               <Dropdown2>
                 <DropLink2>Our Projects</DropLink2>
@@ -178,6 +178,12 @@ const LinkItem2 = styled(Link)`
   &:hover {
     color: #d4bc3a;
   }
+`;
+
+const PlainLink = styled.span`
+  font-size: 14px;
+  font-weight: 600;
+  color: #3a3a3a;
 `;
 
 const Dot2 = styled.div`
