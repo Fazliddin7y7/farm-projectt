@@ -7,8 +7,9 @@ const ROUTES = {
     TEAM: "/team",
     FAQ: "/faq",
     SERVICES: "/services",
-    PORTFOLIO2: "/portfolio2",
-    SERVICEDETAILS: "/servicedetails",
+    BLOG: "/blog",
+  BLOG_DETAILS: "/blog/:id",
+  CONTACT: "/contact",
 
    
 
