@@ -10,6 +10,8 @@ const ROUTES = {
     BLOG: "/blog",
   BLOG_DETAILS: "/blog/:id",
   CONTACT: "/contact",
+  PORTFOLIO2: "/portfolio2",
+  SERVICEDETAILS: "/servicedetails",
 
    
 
