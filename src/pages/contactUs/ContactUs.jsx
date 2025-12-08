@@ -27,7 +27,7 @@ import PurpleCabbage from "../../pages/home/home3Png/purpleCabbage.png";
 import Brinjal from "../../pages/home/home3Png/brinjal.png";
 import Banana from "../../pages/home/home3Png/banana.png";
 import Orange from "../../pages/home/home3Png/orange.png";
-import Watermelon from "../../pages/home/home3Png/watermelon.png";
+import Watermelon from "../../pages/home/home3Png/waterMelon.png";
 import OrganicRiceIcon from "../../pages/home/home3Png/organicRiceIcon.png";
 import FarmIcon from "../../pages/home/home3Png/farmIcon.png";
 import FarmFreshIcon from "../../pages/home/home3Png/freshFarmIcon.png";
