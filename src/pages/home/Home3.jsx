@@ -38,6 +38,7 @@ import TelIcon from "../../pages/home/home3Png/telephoneIcon.png";
 import MailIcon from "../../pages/home/home3Png/messageIcon.png";
 import TheFarmer from "../../pages/home/home3Png/theFarmer.png";
 
+
 const BigContainer = styled.div`
   width: 100%;
   min-height: 100vh;
