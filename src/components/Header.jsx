@@ -381,8 +381,8 @@ export default function Header() {
       hasDropdown: true,
       dropdownItems: [
         { to: ROUTES.PORTFOLIO2, label: "Portfolio Grid 2" },
-        { to: ROUTES.PORTFOLIO_GRID3, label: "Portfolio Grid 3" },
-        { to: ROUTES.PORTFOLIO_GRID4, label: "Portfolio Grid 4" }
+        { to: ROUTES.PORTFOLIO3, label: "Portfolio Grid 3" },
+        { to: ROUTES.PORTFOLIO4, label: "Portfolio Grid 4" }
       ],
       isActive: location.pathname.includes("portfolio")
     },

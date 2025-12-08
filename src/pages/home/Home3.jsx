@@ -1,10 +1,7 @@
 import React from "react";
-import HeaderHome3 from "../../components/HeaderHome3";
 import Header from "../../components/Header";
 import styled from "styled-components";
 import Footer from "../../components/Footer";
-
-
 
 import BgImage from "../../pages/home/home3Png/BgImageMain.png";
 import BgImage2 from "../../pages/home/home3Png/background.png";
@@ -41,20 +38,9 @@ import TelIcon from "../../pages/home/home3Png/telephoneIcon.png";
 import MailIcon from "../../pages/home/home3Png/messageIcon.png";
 import TheFarmer from "../../pages/home/home3Png/theFarmer.png";
 
-// --------------------------------------------------
-// ❗ YANGI SECTION RASMLARI (O‘zing import qilasan)
-// --------------------------------------------------
-// import Banana from "...";
-// import Orange from "...";
-// import Watermelon from "...";
-// import PurpleCabbage from "...";
-// import Carrot from "...";
-// import Brinjal from "...";
-// import YellowBg from "...";
-// --------------------------------------------------
 
 const BigContainer = styled.div`
-  width: 99.1vw;
+  width: 100%;
   min-height: 100vh;
   background: rgba(248, 247, 240, 1);
   overflow-x: hidden;
@@ -64,15 +50,21 @@ const HeaderWrapper = styled.header`
   max-width: 1500px;
   width: 100%;
   margin: 0 auto;
-  padding-left: 15px;
-  padding-right: 15px;
+  padding: 0 15px;
+  
+  @media (max-width: 768px) {
+    padding: 0 10px;
+  }
 `;
 
 const MainContainer = styled.div`
   max-width: 1500px;
   margin: 0 auto;
-  padding-left: 15px;
-  padding-right: 15px;
+  padding: 0 15px;
+  
+  @media (max-width: 768px) {
+    padding: 0 10px;
+  }
 `;
 
 const ImageWrapper = styled.div`
@@ -81,8 +73,20 @@ const ImageWrapper = styled.div`
   width: 100%;
   height: 630px;
   margin: 0 auto;
-  padding-left: 15px;
-  padding-right: 15px;
+  padding: 0 15px;
+  
+  @media (max-width: 1200px) {
+    height: 500px;
+  }
+  
+  @media (max-width: 768px) {
+    height: 400px;
+    padding: 0 10px;
+  }
+  
+  @media (max-width: 576px) {
+    height: 350px;
+  }
 `;
 
 const ForBg = styled.img`
@@ -94,6 +98,20 @@ const ForBg = styled.img`
   position: absolute;
   background-color: rgba(91, 140, 81, 1);
   left: 0;
+  
+  @media (max-width: 1200px) {
+    height: 500px;
+  }
+  
+  @media (max-width: 768px) {
+    height: 400px;
+    border-radius: 20px;
+  }
+  
+  @media (max-width: 576px) {
+    height: 350px;
+    border-radius: 15px;
+  }
 `;
 
 const ForBg2 = styled.img`
@@ -104,11 +122,19 @@ const ForBg2 = styled.img`
   position: absolute;
   top: 0;
   right: 0;
+  
+  @media (max-width: 1200px) {
+    height: 500px;
+    width: 45%;
+  }
+  
+  @media (max-width: 992px) {
+    display: none;
+  }
 `;
 
-
 const ForBg4 = styled.img`
-margin-top: 20px;
+  margin-top: 20px;
   width: 100%;
   max-width: 1500px;
   height: 800px;
@@ -116,19 +142,21 @@ margin-top: 20px;
   position: absolute;
   background-color: rgba(237, 221, 94, 1);
   left: 0;
-`;  
-// --------------------------------------------------
-// ❗ YANGI SARIQ FON
-// --------------------------------------------------
-// const ForBg3 = styled.img`
-//   width: 100%;
-//   height: 900px;
-//   margin-top: 80px;
-//   border-radius: 30px;
-//   background-color: #f6d859;
-//   object-fit: cover;
-// `;
-// --------------------------------------------------
+  
+  @media (max-width: 1200px) {
+    height: 700px;
+  }
+  
+  @media (max-width: 768px) {
+    height: 600px;
+    border-radius: 20px;
+  }
+  
+  @media (max-width: 576px) {
+    height: 500px;
+    border-radius: 15px;
+  }
+`;
 
 const ContentWrapper = styled.div`
   position: absolute;
@@ -138,6 +166,28 @@ const ContentWrapper = styled.div`
   flex-direction: column;
   gap: 25px;
   color: white;
+  
+  @media (max-width: 1200px) {
+    top: 150px;
+    left: 150px;
+  }
+  
+  @media (max-width: 992px) {
+    left: 100px;
+    top: 120px;
+  }
+  
+  @media (max-width: 768px) {
+    left: 50px;
+    top: 100px;
+    gap: 15px;
+  }
+  
+  @media (max-width: 576px) {
+    left: 20px;
+    top: 80px;
+    gap: 10px;
+  }
 `;
 
 const LetsCtn = styled.div`
@@ -148,6 +198,16 @@ const LetsCtn = styled.div`
   height: 32px;
   border-radius: 50px;
   border: 1px solid #fff;
+  
+  @media (max-width: 768px) {
+    width: 160px;
+    height: 28px;
+  }
+  
+  @media (max-width: 576px) {
+    width: 140px;
+    height: 26px;
+  }
 `;
 
 const LetsText = styled.h1`
@@ -155,6 +215,10 @@ const LetsText = styled.h1`
   font-weight: 500;
   font-size: 14px;
   color: white;
+  
+  @media (max-width: 576px) {
+    font-size: 12px;
+  }
 `;
 
 const BigTitle = styled.h1`
@@ -163,6 +227,26 @@ const BigTitle = styled.h1`
   font-size: 52px;
   font-weight: 700;
   line-height: 1.1;
+  
+  @media (max-width: 1200px) {
+    font-size: 44px;
+    width: 350px;
+  }
+  
+  @media (max-width: 992px) {
+    font-size: 38px;
+    width: 300px;
+  }
+  
+  @media (max-width: 768px) {
+    font-size: 32px;
+    width: 250px;
+  }
+  
+  @media (max-width: 576px) {
+    font-size: 26px;
+    width: 200px;
+  }
 `;
 
 const ContactBtn2 = styled.div`
@@ -176,10 +260,30 @@ const ContactBtn2 = styled.div`
   display: flex;
   align-items: center;
   gap: 8px;
+  
+  @media (max-width: 768px) {
+    width: 170px;
+    padding: 10px 18px;
+    font-size: 14px;
+  }
+  
+  @media (max-width: 576px) {
+    width: 150px;
+    padding: 8px 15px;
+    font-size: 12px;
+  }
 `;
 
 const FlyImage = styled.img`
   width: 30px;
+  
+  @media (max-width: 768px) {
+    width: 24px;
+  }
+  
+  @media (max-width: 576px) {
+    width: 20px;
+  }
 `;
 
 const BadgeBox = styled.div`
@@ -188,6 +292,10 @@ const BadgeBox = styled.div`
   right: 150px;
   width: 180px;
   height: 180px;
+  
+  @media (max-width: 992px) {
+    display: none;
+  }
 `;
 
 const SectionImage = styled.img`
@@ -196,20 +304,44 @@ const SectionImage = styled.img`
   height: auto;
   margin: 10px auto 0;
   display: block;
+  
+  @media (max-width: 768px) {
+    margin-top: 20px;
+  }
 `;
 
 const ProductsWrapper = styled.div`
   max-width: 1500px;
   width: 100%;
   margin: 200px auto 0;
-  padding-left: 15px;
-  padding-right: 15px;
+  padding: 0 15px;
+  
+  @media (max-width: 1200px) {
+    margin-top: 150px;
+  }
+  
+  @media (max-width: 768px) {
+    margin-top: 100px;
+    padding: 0 10px;
+  }
+  
+  @media (max-width: 576px) {
+    margin-top: 80px;
+  }
 `;
 
 const ProductsTop = styled.div`
   display: flex;
   justify-content: space-between;
   align-items: center;
+  flex-wrap: wrap;
+  gap: 20px;
+  
+  @media (max-width: 576px) {
+    flex-direction: column;
+    align-items: flex-start;
+    gap: 15px;
+  }
 `;
 
 const Title = styled.h1`
@@ -217,17 +349,40 @@ const Title = styled.h1`
   font-family: "Signika", sans-serif;
   color: rgba(64, 74, 61, 1);
   font-weight: 500;
+  
+  @media (max-width: 1200px) {
+    font-size: 38px;
+  }
+  
+  @media (max-width: 768px) {
+    font-size: 32px;
+  }
+  
+  @media (max-width: 576px) {
+    font-size: 28px;
+  }
 `;
 
-// Overlay title specific to the yellow section (placed above the background image)
 const OverlayTitle = styled.h1`
-  top: 140px;
-  left: 500px;
   font-size: 44px;
   font-family: "Signika", sans-serif;
-  color:rgba(64, 74, 61, 1);
+  color: rgba(64, 74, 61, 1);
   font-weight: 700;
-  z-index: 3;
+  text-align: center;
+  
+  @media (max-width: 1200px) {
+    font-size: 38px;
+  }
+  
+  @media (max-width: 768px) {
+    font-size: 32px;
+  }
+  
+  @media (max-width: 576px) {
+    font-size: 28px;
+    text-align: left;
+    padding-left: 20px;
+  }
 `;
 
 const ArrowButtons = styled.div`
@@ -244,16 +399,35 @@ const ArrowBtn = styled.button`
   cursor: pointer;
   font-size: 18px;
   font-weight: bold;
+  
+  @media (max-width: 768px) {
+    width: 34px;
+    height: 34px;
+    font-size: 16px;
+  }
 `;
 
 const ProductsGrid = styled.div`
   margin-top: 40px;
-  display: flex;
+  display: grid;
+  grid-template-columns: repeat(auto-fit, minmax(280px, 1fr));
   gap: 30px;
+  
+  @media (max-width: 768px) {
+    grid-template-columns: repeat(2, 1fr);
+    gap: 20px;
+  }
+  
+  @media (max-width: 576px) {
+    grid-template-columns: 1fr;
+    max-width: 350px;
+    margin-left: auto;
+    margin-right: auto;
+  }
 `;
 
 const ProductCard = styled.div`
-  width: 310px;
+  width: 100%;
   background: white;
   border-radius: 30px;
   padding: 20px;
@@ -261,10 +435,15 @@ const ProductCard = styled.div`
   transition: 0.3s;
   cursor: pointer;
   border: 2px solid transparent;
-
+  
   &:hover {
     border-color: #5b8c51;
     box-shadow: 0px 10px 20px rgba(0, 0, 0, 0.07);
+  }
+  
+  @media (max-width: 768px) {
+    border-radius: 25px;
+    padding: 15px;
   }
 `;
 
@@ -272,11 +451,34 @@ const ProductImage = styled.img`
   width: 210px;
   height: 210px;
   object-fit: contain;
+  
+  @media (max-width: 992px) {
+    width: 180px;
+    height: 180px;
+  }
+  
+  @media (max-width: 768px) {
+    width: 150px;
+    height: 150px;
+  }
+  
+  @media (max-width: 576px) {
+    width: 180px;
+    height: 180px;
+  }
 `;
 
 const ProductName = styled.h3`
   font-size: 22px;
   margin-top: 10px;
+  
+  @media (max-width: 768px) {
+    font-size: 20px;
+  }
+  
+  @media (max-width: 576px) {
+    font-size: 18px;
+  }
 `;
 
 const StarRow = styled.div`
@@ -285,14 +487,22 @@ const StarRow = styled.div`
   align-items: center;
   justify-content: center;
   gap: 6px;
-
+  
   img {
     width: 120px;
+    
+    @media (max-width: 768px) {
+      width: 100px;
+    }
   }
-
+  
   span {
     font-size: 16px;
     color: #555;
+    
+    @media (max-width: 576px) {
+      font-size: 14px;
+    }
   }
 `;
 
@@ -301,19 +511,21 @@ const PriceBox = styled.div`
   display: flex;
   justify-content: center;
   gap: 10px;
-
+  
   span.old {
     color: #999;
     text-decoration: line-through;
+    font-size: 14px;
   }
-
+  
   span.new {
     color: #5b8c51;
     font-weight: bold;
+    font-size: 16px;
   }
 `;
 
- const CartBtn = styled.button`
+const CartBtn = styled.button`
   margin-top: 12px;
   width: 44px;
   height: 44px;
@@ -323,21 +535,33 @@ const PriceBox = styled.div`
   color: #5b8c51;
   cursor: pointer;
   font-size: 20px;
+  
+  @media (max-width: 768px) {
+    width: 40px;
+    height: 40px;
+    font-size: 18px;
+  }
 `;
 
-// ----------------------------------------------------------------------
-// 🌟 YANGI DIZAYN — "Products Delivered to Home"
-// ----------------------------------------------------------------------
-
 const YellowSectionWrapper = styled.div`
-  /* align with other main containers */
   max-width: 1500px;
   width: 100%;
-  height: 900px;
   margin: 150px auto 0;
   position: relative;
-  padding-left: 15px;
-  padding-right: 15px;
+  padding: 0 15px;
+  
+  @media (max-width: 1200px) {
+    margin-top: 120px;
+  }
+  
+  @media (max-width: 768px) {
+    margin-top: 80px;
+    padding: 0 10px;
+  }
+  
+  @media (max-width: 576px) {
+    margin-top: 60px;
+  }
 `;
 
 const YellowContentBox = styled.div`
@@ -352,6 +576,27 @@ const YellowContentBox = styled.div`
   padding: 30px;
   border-radius: 20px;
   z-index: 4;
+  
+  @media (max-width: 1200px) {
+    top: 150px;
+    padding: 25px;
+  }
+  
+  @media (max-width: 992px) {
+    position: relative;
+    top: 0;
+    margin-top: 30px;
+    background: white;
+  }
+  
+  @media (max-width: 768px) {
+    padding: 20px;
+    border-radius: 15px;
+  }
+  
+  @media (max-width: 576px) {
+    padding: 15px;
+  }
 `;
 
 const YellowTabs = styled.div`
@@ -359,6 +604,24 @@ const YellowTabs = styled.div`
   justify-content: space-between;
   padding: 0 50px;
   margin-bottom: 40px;
+  flex-wrap: wrap;
+  gap: 20px;
+  
+  @media (max-width: 992px) {
+    padding: 0 30px;
+  }
+  
+  @media (max-width: 768px) {
+    padding: 0;
+    justify-content: center;
+    gap: 30px;
+  }
+  
+  @media (max-width: 576px) {
+    flex-direction: column;
+    align-items: center;
+    gap: 15px;
+  }
 `;
 
 const YellowTab = styled.div`
@@ -366,12 +629,38 @@ const YellowTab = styled.div`
   font-weight: 500;
   font-family: "Signika", sans-serif;
   cursor: pointer;
+  padding: 8px 16px;
+  
+  @media (max-width: 768px) {
+    font-size: 16px;
+  }
+  
+  @media (max-width: 576px) {
+    font-size: 15px;
+    text-align: center;
+  }
 `;
 
 const YellowProducts = styled.div`
   display: grid;
   grid-template-columns: repeat(4, 1fr);
   gap: 40px;
+  
+  @media (max-width: 1200px) {
+    grid-template-columns: repeat(3, 1fr);
+    gap: 30px;
+  }
+  
+  @media (max-width: 992px) {
+    grid-template-columns: repeat(2, 1fr);
+  }
+  
+  @media (max-width: 576px) {
+    grid-template-columns: 1fr;
+    gap: 25px;
+    max-width: 300px;
+    margin: 0 auto;
+  }
 `;
 
 const YellowCard = styled.div`
@@ -379,28 +668,45 @@ const YellowCard = styled.div`
   padding: 18px 12px;
   border-radius: 14px;
   display: flex;
-  justify-content:center; 
+  flex-direction: column;
+  justify-content: center;
   align-items: center;
+  gap: 15px;
+  
+  @media (max-width: 576px) {
+    padding: 15px 10px;
+  }
 `;
 
 const YellowImg = styled.img`
   width: 120px;
   height: 120px;
   object-fit: contain;
+  
+  @media (max-width: 768px) {
+    width: 100px;
+    height: 100px;
+  }
+  
+  @media (max-width: 576px) {
+    width: 90px;
+    height: 90px;
+  }
 `;
 
 const OldPrice = styled.span`
   color: #888;
   text-decoration: line-through;
+  font-size: 14px;
 `;
 
 const NewPrice = styled.span`
   color: #5b8c51;
   font-weight: bold;
   margin-left: 8px;
+  font-size: 16px;
 `;
 
-// ---------------- TESTIMONIALS SECTION ----------------
 const TestimonialsWrapper = styled.section`
   max-width: 1200px;
   width: 100%;
@@ -408,13 +714,28 @@ const TestimonialsWrapper = styled.section`
   display: flex;
   gap: 30px;
   align-items: flex-start;
-  padding-left: 15px;
-  padding-right: 15px;
+  padding: 0 15px;
+  
+  @media (max-width: 992px) {
+    flex-direction: column;
+    gap: 40px;
+  }
+  
+  @media (max-width: 768px) {
+    padding: 0 10px;
+    margin-top: 40px;
+  }
 `;
 
 const TestiLeft = styled.div`
   width: 45%;
   padding-right: 20px;
+  
+  @media (max-width: 992px) {
+    width: 100%;
+    padding-right: 0;
+    text-align: center;
+  }
 `;
 
 const TestiBadge = styled.div`
@@ -432,12 +753,28 @@ const TestiTitle = styled.h2`
   color: #374736;
   line-height: 1.05;
   margin: 10px 0 24px;
+  
+  @media (max-width: 1200px) {
+    font-size: 40px;
+  }
+  
+  @media (max-width: 768px) {
+    font-size: 34px;
+  }
+  
+  @media (max-width: 576px) {
+    font-size: 28px;
+  }
 `;
 
 const TestiNav = styled.div`
   display: flex;
   gap: 12px;
   margin-top: 18px;
+  
+  @media (max-width: 992px) {
+    justify-content: center;
+  }
 `;
 
 const NavBtn = styled.button`
@@ -447,11 +784,21 @@ const NavBtn = styled.button`
   border: 1px solid rgba(0,0,0,0.08);
   background: transparent;
   cursor: pointer;
+  
+  @media (max-width: 768px) {
+    width: 40px;
+    height: 40px;
+  }
 `;
 
 const TestiRight = styled.div`
   width: 55%;
   padding-left: 8px;
+  
+  @media (max-width: 992px) {
+    width: 100%;
+    padding-left: 0;
+  }
 `;
 
 const TestiCard = styled.div`
@@ -462,6 +809,10 @@ const Stars = styled.img`
   width: 140px;
   display: block;
   margin-bottom: 14px;
+  
+  @media (max-width: 768px) {
+    width: 120px;
+  }
 `;
 
 const Quote = styled.p`
@@ -469,6 +820,18 @@ const Quote = styled.p`
   color: #2b3b2b;
   line-height: 1.4;
   margin-bottom: 18px;
+  
+  @media (max-width: 1200px) {
+    font-size: 20px;
+  }
+  
+  @media (max-width: 768px) {
+    font-size: 18px;
+  }
+  
+  @media (max-width: 576px) {
+    font-size: 16px;
+  }
 `;
 
 const AuthorRow = styled.div`
@@ -482,6 +845,11 @@ const Avatar = styled.img`
   height: 64px;
   border-radius: 50%;
   object-fit: cover;
+  
+  @media (max-width: 576px) {
+    width: 50px;
+    height: 50px;
+  }
 `;
 
 const AuthorInfo = styled.div``;
@@ -489,6 +857,11 @@ const AuthorInfo = styled.div``;
 const AuthorName = styled.div`
   font-weight: 700;
   color: #374736;
+  font-size: 18px;
+  
+  @media (max-width: 576px) {
+    font-size: 16px;
+  }
 `;
 
 const AuthorRole = styled.div`
@@ -501,23 +874,37 @@ const Dots = styled.div`
   display: flex;
   gap: 10px;
   justify-content: flex-end;
+  
+  @media (max-width: 992px) {
+    justify-content: center;
+  }
 `;
 
 const Dot = styled.span`
   width: 12px;
   height: 12px;
   border-radius: 50%;
-  background: ${"#e9df59"};
-  opacity: ${"0.3"};
+  background: #e9df59;
+  opacity: ${props => props.active ? "1" : "0.3"};
 `;
 
-// ----------------- PARTNERS / LOGOS ROW -----------------
 const LogosWrapper = styled.div`
   width: 100%;
   display: flex;
   justify-content: center;
-  margin-top: 150px;
+  margin-top: 100px;
   margin-bottom: 80px;
+  padding: 0 15px;
+  
+  @media (max-width: 768px) {
+    margin-top: 60px;
+    margin-bottom: 60px;
+  }
+  
+  @media (max-width: 576px) {
+    margin-top: 40px;
+    margin-bottom: 40px;
+  }
 `;
 
 const LogosRow = styled.div`
@@ -527,8 +914,16 @@ const LogosRow = styled.div`
   justify-content: space-between;
   align-items: center;
   gap: 20px;
-  padding-left: 15px;
-  padding-right: 15px;
+  
+  @media (max-width: 992px) {
+    flex-wrap: wrap;
+    justify-content: center;
+    gap: 30px;
+  }
+  
+  @media (max-width: 576px) {
+    gap: 20px;
+  }
 `;
 
 const LogoItem = styled.img`
@@ -536,9 +931,20 @@ const LogoItem = styled.img`
   height: auto;
   opacity: 0.85;
   filter: grayscale(10%);
+  
+  @media (max-width: 992px) {
+    width: 100px;
+  }
+  
+  @media (max-width: 768px) {
+    width: 90px;
+  }
+  
+  @media (max-width: 576px) {
+    width: 80px;
+  }
 `;
 
-// ----------------- ORGANIC HERO SECTION -----------------
 const HeroWrapper = styled.section`
   max-width: 1300px;
   width: 100%;
@@ -547,12 +953,32 @@ const HeroWrapper = styled.section`
   border-radius: 30px;
   padding: 26px;
   box-shadow: 0 12px 30px rgba(0,0,0,0.04);
+  
+  @media (max-width: 1200px) {
+    max-width: 95%;
+  }
+  
+  @media (max-width: 768px) {
+    padding: 20px;
+    border-radius: 20px;
+    margin: 30px auto 60px;
+  }
+  
+  @media (max-width: 576px) {
+    padding: 15px;
+    border-radius: 15px;
+  }
 `;
 
 const HeroInner = styled.div`
   display: flex;
   align-items: center;
   gap: 36px;
+  
+  @media (max-width: 992px) {
+    flex-direction: column;
+    gap: 30px;
+  }
 `;
 
 const HeroLeft = styled.img`
@@ -560,6 +986,15 @@ const HeroLeft = styled.img`
   height: auto;
   border-radius: 20px;
   object-fit: cover;
+  
+  @media (max-width: 992px) {
+    width: 100%;
+    height: 300px;
+  }
+  
+  @media (max-width: 576px) {
+    height: 200px;
+  }
 `;
 
 const HeroRight = styled.div`
@@ -567,6 +1002,12 @@ const HeroRight = styled.div`
   display: flex;
   flex-direction: column;
   gap: 18px;
+  
+  @media (max-width: 992px) {
+    width: 100%;
+    text-align: center;
+    align-items: center;
+  }
 `;
 
 const BadgeFreeSmall = styled.span`
@@ -584,12 +1025,28 @@ const HeroTitle = styled.h2`
   color: #374736;
   line-height: 1.05;
   margin: 0;
+  
+  @media (max-width: 1200px) {
+    font-size: 40px;
+  }
+  
+  @media (max-width: 768px) {
+    font-size: 34px;
+  }
+  
+  @media (max-width: 576px) {
+    font-size: 28px;
+  }
 `;
 
 const HeroTextSmall = styled.p`
   color: #707770;
   font-size: 16px;
   line-height: 1.6;
+  
+  @media (max-width: 576px) {
+    font-size: 14px;
+  }
 `;
 
 const BuyNowBtn = styled.button`
@@ -601,15 +1058,24 @@ const BuyNowBtn = styled.button`
   border: none;
   cursor: pointer;
   font-weight: 600;
+  
+  @media (max-width: 576px) {
+    width: 140px;
+    padding: 10px 15px;
+    font-size: 14px;
+  }
 `;
 
-// ----------------- LATEST POSTS / ARTICLES -----------------
 const BlogSection = styled.section`
   max-width: 1200px;
   width: 100%;
   margin: 40px auto 120px;
-  padding-left: 15px;
-  padding-right: 15px;
+  padding: 0 15px;
+  
+  @media (max-width: 768px) {
+    margin: 30px auto 80px;
+    padding: 0 10px;
+  }
 `;
 
 const BlogTop = styled.div`
@@ -617,23 +1083,62 @@ const BlogTop = styled.div`
   justify-content: space-between;
   align-items: center;
   margin-bottom: 24px;
+  flex-wrap: wrap;
+  gap: 20px;
+  
+  @media (max-width: 576px) {
+    flex-direction: column;
+    align-items: flex-start;
+  }
 `;
 
 const BlogHeading = styled.h2`
   font-size: 48px;
   color: #374736;
   margin: 0;
+  
+  @media (max-width: 1200px) {
+    font-size: 40px;
+  }
+  
+  @media (max-width: 768px) {
+    font-size: 34px;
+  }
+  
+  @media (max-width: 576px) {
+    font-size: 28px;
+  }
 `;
 
 const BlogGrid = styled.div`
   display: grid;
   grid-template-columns: repeat(3, 1fr);
   gap: 30px;
+  
+  @media (max-width: 992px) {
+    grid-template-columns: repeat(2, 1fr);
+  }
+  
+  @media (max-width: 768px) {
+    gap: 20px;
+  }
+  
+  @media (max-width: 576px) {
+    grid-template-columns: 1fr;
+    max-width: 400px;
+    margin: 0 auto;
+  }
 `;
 
 const BlogCard = styled.div`
   border-radius: 24px;
   overflow: hidden;
+  background: white;
+  box-shadow: 0 5px 15px rgba(0,0,0,0.05);
+  
+  @media (max-width: 768px) {
+    border-radius: 20px;
+  }
 `;
 
 const BlogImg = styled.img`
@@ -641,10 +1146,22 @@ const BlogImg = styled.img`
   height: 260px;
   object-fit: cover;
   display: block;
+  
+  @media (max-width: 768px) {
+    height: 200px;
+  }
+  
+  @media (max-width: 576px) {
+    height: 180px;
+  }
 `;
 
 const BlogBody = styled.div`
   padding: 22px 24px 30px;
+  
+  @media (max-width: 768px) {
+    padding: 18px 20px 25px;
+  }
 `;
 
 const TagBadge = styled.span`
@@ -669,12 +1186,24 @@ const BlogCardTitle = styled.h3`
   margin: 14px 0 6px;
   font-size: 22px;
   color: #2e3b31;
+  
+  @media (max-width: 768px) {
+    font-size: 20px;
+  }
+  
+  @media (max-width: 576px) {
+    font-size: 18px;
+  }
 `;
 
 const BlogExcerpt = styled.p`
   color: #6b756b;
   font-size: 15px;
   margin: 0 0 12px;
+  
+  @media (max-width: 576px) {
+    font-size: 14px;
+  }
 `;
 
 const ReadBtn = styled.button`
@@ -685,7 +1214,6 @@ const ReadBtn = styled.button`
   cursor: pointer;
 `;
 
-// ----------------- YELLOW FOOTER BAR -----------------
 const FooterYellowWrapper = styled.footer`
   width: 100%;
   background: #e9df59;
@@ -700,8 +1228,17 @@ const FooterYellowContainer = styled.div`
   display: flex;
   justify-content: space-between;
   align-items: center;
-  padding-left: 15px;
-  padding-right: 15px;
+  padding: 0 15px;
+  
+  @media (max-width: 992px) {
+    flex-direction: column;
+    gap: 20px;
+    text-align: center;
+  }
+  
+  @media (max-width: 768px) {
+    padding: 0 10px;
+  }
 `;
 
 const FooterNav = styled.nav`
@@ -711,14 +1248,32 @@ const FooterNav = styled.nav`
   color: rgba(55,71,54,0.9);
   font-weight: 600;
   font-size: 13px;
+  flex-wrap: wrap;
+  
+  @media (max-width: 768px) {
+    justify-content: center;
+    gap: 10px;
+  }
+  
+  @media (max-width: 576px) {
+    flex-direction: column;
+    gap: 5px;
+  }
 `;
 
-const NavItem = styled.span``;
+const NavItem = styled.span`
+  cursor: pointer;
+`;
 
 const ContactGroup = styled.div`
   display: flex;
   gap: 28px;
   align-items: center;
+  
+  @media (max-width: 768px) {
+    flex-direction: column;
+    gap: 15px;
+  }
 `;
 
 const ContactItem = styled.div`
@@ -728,6 +1283,10 @@ const ContactItem = styled.div`
   color: rgba(55,71,54,0.9);
   font-weight: 500;
   font-size: 14px;
+  
+  @media (max-width: 576px) {
+    font-size: 13px;
+  }
 `;
 
 const IconCircle = styled.div`
@@ -738,22 +1297,25 @@ const IconCircle = styled.div`
   display: flex;
   align-items: center;
   justify-content: center;
+  
+  @media (max-width: 576px) {
+    width: 40px;
+    height: 40px;
+  }
 `;
 
 const ContactText = styled.div``;
 
-// ----------------------------------------------------------------------
-// FARMING SECTIONS (old code) — o‘zgarmagan
-// ----------------------------------------------------------------------
-
 const FarmingSection = styled.div`
   width: 100%;
-  /* keep FarmingSection just under the yellow area */
   margin-top: 80px;
   display: flex;
   justify-content: flex-start;
+  
+  @media (max-width: 768px) {
+    margin-top: 60px;
+  }
 `;
-
 
 const FarmingBox = styled.div`
   max-width: 1500px;
@@ -763,14 +1325,39 @@ const FarmingBox = styled.div`
   justify-content: space-between;
   padding: 60px;
   border-radius: 30px;
+  
+  @media (max-width: 1200px) {
+    padding: 40px;
+  }
+  
+  @media (max-width: 992px) {
+    flex-direction: column;
+    gap: 40px;
+  }
+  
+  @media (max-width: 768px) {
+    padding: 30px 20px;
+    border-radius: 20px;
+  }
+  
+  @media (max-width: 576px) {
+    padding: 20px 15px;
+    border-radius: 15px;
+  }
 `;
 
 const FarmingLeft = styled.div`
   width: 50%;
   display: flex;
-  margin-top:100px;
+  margin-top: 100px;
   flex-direction: column;
   gap: 20px;
+  
+  @media (max-width: 992px) {
+    width: 100%;
+    margin-top: 0;
+    order: 2;
+  }
 `;
 
 const FarmingTitle = styled.h1`
@@ -778,13 +1365,41 @@ const FarmingTitle = styled.h1`
   font-family: "Signika", sans-serif;
   color: #374736;
   font-weight: 600;
-  line-height:60px;
+  line-height: 60px;
+  
+  @media (max-width: 1200px) {
+    font-size: 48px;
+    line-height: 52px;
+  }
+  
+  @media (max-width: 992px) {
+    font-size: 42px;
+    line-height: 46px;
+  }
+  
+  @media (max-width: 768px) {
+    font-size: 36px;
+    line-height: 40px;
+  }
+  
+  @media (max-width: 576px) {
+    font-size: 30px;
+    line-height: 34px;
+  }
 `;
 
 const FarmingText = styled.p`
   font-size: 18px;
   color: #555;
   line-height: 1.6;
+  
+  @media (max-width: 768px) {
+    font-size: 16px;
+  }
+  
+  @media (max-width: 576px) {
+    font-size: 15px;
+  }
 `;
 
 const FarmingBtn = styled.button`
@@ -797,84 +1412,124 @@ const FarmingBtn = styled.button`
   font-size: 18px;
   cursor: pointer;
   margin-top: 15px;
+  
+  @media (max-width: 768px) {
+    width: 180px;
+    padding: 12px 20px;
+    font-size: 16px;
+  }
+  
+  @media (max-width: 576px) {
+    width: 160px;
+    padding: 10px 18px;
+    font-size: 15px;
+  }
 `;
 
 const FarmingRight = styled.img`
   width: 45%;
-  height:auto;
+  height: auto;
   border-radius: 30px;
-`;
-
-const FarmingBenefits = styled.div`
-  max-width: 1500px;
-  width: 100%;
-  margin: 120px auto;
-  display: flex;
-  justify-content: space-between;
-  padding-left: 15px;
-  padding-right: 15px;
-`;
-
-const BenefitCard = styled.div`
-  width: 450px;
-  background: white;
-  padding: 40px;
-  border-radius: 30px;
-  box-shadow: 0 10px 25px rgba(0,0,0,0.05);
-`;
-
-const BenefitTitle = styled.h2`
-  font-size: 32px;
-  margin-bottom: 14px;
-  font-family: "Signika", sans-serif;
-  color: #374736;
-`;
-
-const BenefitText = styled.p`
-  font-size: 17px;
-  color: #666;
-  line-height: 1.6;
-`;
-
-const ListImage = styled.img`
-  width: 350px;
-  height:auto;
+  
+  @media (max-width: 992px) {
+    width: 100%;
+    height: 400px;
+    order: 1;
+  }
+  
+  @media (max-width: 768px) {
+    height: 300px;
+    border-radius: 20px;
+  }
+  
+  @media (max-width: 576px) {
+    height: 250px;
+    border-radius: 15px;
+  }
 `;
 
 const ContainerForList = styled.div`
   display: flex;
+  gap: 20px;
+  
+  @media (max-width: 768px) {
+    flex-direction: column;
+  }
+`;
+
+const ListImage = styled.img`
+  width: 350px;
+  height: auto;
+  
+  @media (max-width: 1200px) {
+    width: 300px;
+  }
+  
+  @media (max-width: 992px) {
+    width: 100%;
+    max-width: 400px;
+  }
 `;
 
 const ListImage2 = styled.img`
   width: 350px;
-  height:auto;
+  height: auto;
+  
+  @media (max-width: 1200px) {
+    width: 300px;
+  }
+  
+  @media (max-width: 992px) {
+    width: 100%;
+    max-width: 400px;
+  }
 `;
 
 const ForOurPr = styled.img`
-  width:147px;
+  width: 147px;
+  height: 30px;
   
-  height:30px;
-  z-index: 5;
-  top: 140px;
-  left: 800px;
-  `;
-
+  @media (max-width: 768px) {
+    width: 130px;
+    height: auto;
+  }
+  
+  @media (max-width: 576px) {
+    width: 110px;
+  }
+`;
 
 const JustContainer = styled.div`
-  display:flex;
-  justify-content:center;
+  display: flex;
+  justify-content: center;
   position: absolute;
-  align-items:center;
-  flex-direction:column;
-  top:100px;
-  left:500px;
+  align-items: center;
+  flex-direction: column;
+  top: 100px;
+  left: 50%;
+  transform: translateX(-50%);
+  width: 100%;
+  padding: 0 15px;
+  z-index: 5;
+  
+  @media (max-width: 992px) {
+    top: 80px;
+  }
+  
+  @media (max-width: 768px) {
+    top: 60px;
+  }
+  
+  @media (max-width: 576px) {
+    top: 50px;
+  }
 `;
 
 const ContainerForPrice = styled.div`
-  display:inline-flex;
-  justify-content: center;  
+  display: inline-flex;
+  justify-content: center;
   align-items: center;
-  flex-direction:column;
+  flex-direction: column;
   gap: 10px;
 `;
 
@@ -884,16 +1539,6 @@ const ContainerForPriceColumn = styled.div`
   align-items: center;
 `;
 
-
-
-
-
-// =======================================================================================
-// =======================================================================================
-// ❗ HOME3 — FULL JSX
-// =======================================================================================
-// =======================================================================================
-
 export default function Home3() {
   return (
     <BigContainer>
@@ -901,7 +1546,6 @@ export default function Home3() {
         <Header />
       </HeaderWrapper>
 
-      {/* HEADER SECTION */}
       <MainContainer>
         <ImageWrapper>
           <ForBg src={BgImage} />
@@ -921,10 +1565,8 @@ export default function Home3() {
         </ImageWrapper>
       </MainContainer>
 
-      {/* WHITE SECTION */}
       <SectionImage src={Sectin} />
 
-      {/* ORIGINAL PRODUCTS (OLD SECTION) */}
       <ProductsWrapper>
         <ProductsTop>
           <Title>Check Our Products</Title>
@@ -939,7 +1581,7 @@ export default function Home3() {
             <ProductImage src={Corn} />
             <ProductName>Corn</ProductName>
             <StarRow>
-              <img src={StarRate} />
+              <img src={StarRate} alt="Star rating" />
               <span>(5.0)</span>
             </StarRow>
             <PriceBox>
@@ -952,7 +1594,7 @@ export default function Home3() {
             <ProductImage src={Tomato} />
             <ProductName>Tomato</ProductName>
             <StarRow>
-              <img src={StarRate} />
+              <img src={StarRate} alt="Star rating" />
               <span>(5.0)</span>
             </StarRow>
             <PriceBox>
@@ -966,7 +1608,7 @@ export default function Home3() {
             <ProductImage src={Cabbage} />
             <ProductName>Cabbage</ProductName>
             <StarRow>
-              <img src={StarRate} />
+              <img src={StarRate} alt="Star rating" />
               <span>(5.0)</span>
             </StarRow>
             <PriceBox>
@@ -980,7 +1622,7 @@ export default function Home3() {
             <ProductImage src={Kiwi} />
             <ProductName>Kiwi</ProductName>
             <StarRow>
-              <img src={StarRate} />
+              <img src={StarRate} alt="Star rating" />
               <span>(5.0)</span>
             </StarRow>
             <PriceBox>
@@ -992,50 +1634,31 @@ export default function Home3() {
         </ProductsGrid>
       </ProductsWrapper>
 
-      {/* ---------------------------------------------------------------------- */}
-      {/* 🌟 YANGI SARIQ SECTION — "Products Delivered To Home" */}
-      {/* ---------------------------------------------------------------------- */}
-<FarmingSection>
+      <FarmingSection>
         <FarmingBox>
-
           <FarmingRight src={FarmingSectionImg} />
           <FarmingLeft>
-            <FarmingTitle>We’re Best Agriculture & Organic Farms</FarmingTitle>
+            <FarmingTitle>We're Best Agriculture & Organic Farms</FarmingTitle>
             <FarmingText>
               There are many variations of passages of Lorem Ipsum available, but the majority have suffered alteration in some form, by injected humour, or randomised words which don't look even.
             </FarmingText>
 
             <ContainerForList>
-              <ListImage src={List} />
-              <ListImage2 src={List2} />
+              <ListImage src={List} alt="Benefits list 1" />
+              <ListImage2 src={List2} alt="Benefits list 2" />
             </ContainerForList>
             <FarmingBtn>Learn More</FarmingBtn>
           </FarmingLeft>
-
         </FarmingBox>
-      </FarmingSection> 
-
-
-
-
-
-
-
+      </FarmingSection>
 
       <YellowSectionWrapper>
-        
-       
         <ForBg4 src={NewBg2} />
 
         <JustContainer>
-        <ForOurPr src={OurPr} />
-
-
-       
-        <OverlayTitle>Products Delivered To Home</OverlayTitle>
-
-</JustContainer>
-        
+          <ForOurPr src={OurPr} alt="Our Products" />
+          <OverlayTitle>Products Delivered To Home</OverlayTitle>
+        </JustContainer>
 
         <YellowContentBox>
           <YellowTabs>
@@ -1045,143 +1668,97 @@ export default function Home3() {
           </YellowTabs>
 
           <YellowProducts>
-            
-            {/* 1 */}
             <YellowCard>
-              
-              <YellowImg src={Cabbage} />
+              <YellowImg src={Cabbage} alt="Cabbage" />
               <ContainerForPrice>
-              <h3 style={{fontFamily: "Signika, sans-serif" , fontWeight:"500", marginRight:"40px"}}>Cabbage</h3>
-               <ContainerForPriceColumn>
-              <OldPrice>$20.00</OldPrice>
-              <NewPrice>$18.00</NewPrice>
-              </ContainerForPriceColumn>
+                <h3 style={{fontFamily: "Signika, sans-serif", fontWeight: "500", marginRight: "40px"}}>Cabbage</h3>
+                <ContainerForPriceColumn>
+                  <OldPrice>$20.00</OldPrice>
+                  <NewPrice>$18.00</NewPrice>
+                </ContainerForPriceColumn>
               </ContainerForPrice>
             </YellowCard>
 
-            {/* 2 */}
-             <YellowCard>
-              
-              <YellowImg src={Tomato} />
-              <ContainerForPrice>
-              <h3 style={{fontFamily: "Signika, sans-serif" , fontWeight:"500", marginRight:"40px"}}>Tomato</h3>
-               <ContainerForPriceColumn>
-              <OldPrice>$20.00</OldPrice>
-              <NewPrice>$18.00</NewPrice>
-              </ContainerForPriceColumn>
-              </ContainerForPrice>
-            </YellowCard>
-
-            {/* 3 */}
-             <YellowCard>
-              
-              <YellowImg src={Carrot} />
-              <ContainerForPrice>
-              <h3 style={{fontFamily: "Signika, sans-serif" , fontWeight:"500", marginRight:"40px"}}>Carrot</h3>
-               <ContainerForPriceColumn>
-              <OldPrice>$11.05</OldPrice>
-              <NewPrice>$10.00</NewPrice>
-              </ContainerForPriceColumn>
-              </ContainerForPrice>
-            </YellowCard>
-
-            {/* 4 */}
             <YellowCard>
-              
-              <YellowImg src={Kiwi2} />
+              <YellowImg src={Tomato} alt="Tomato" />
               <ContainerForPrice>
-              <h3 style={{fontFamily: "Signika, sans-serif" , fontWeight:"500", marginRight:"40px"}}>Kiwi</h3>
-               <ContainerForPriceColumn>
-              <OldPrice>$3.00</OldPrice>
-              <NewPrice>$2.00</NewPrice>
-              </ContainerForPriceColumn>
+                <h3 style={{fontFamily: "Signika, sans-serif", fontWeight: "500", marginRight: "40px"}}>Tomato</h3>
+                <ContainerForPriceColumn>
+                  <OldPrice>$20.00</OldPrice>
+                  <NewPrice>$18.00</NewPrice>
+                </ContainerForPriceColumn>
               </ContainerForPrice>
             </YellowCard>
 
-            {/* 5 */}
             <YellowCard>
-              
-              <YellowImg src={PurpleCabbage} />
+              <YellowImg src={Carrot} alt="Carrot" />
               <ContainerForPrice>
-              <h3 style={{fontFamily: "Signika, sans-serif" , fontWeight:"500", marginRight:"40px"}}>Purple Cabbage</h3>
-               <ContainerForPriceColumn>
-              <OldPrice>$65.00</OldPrice>
-              <NewPrice>$55.00</NewPrice>
-              </ContainerForPriceColumn>
+                <h3 style={{fontFamily: "Signika, sans-serif", fontWeight: "500", marginRight: "40px"}}>Carrot</h3>
+                <ContainerForPriceColumn>
+                  <OldPrice>$11.05</OldPrice>
+                  <NewPrice>$10.00</NewPrice>
+                </ContainerForPriceColumn>
               </ContainerForPrice>
             </YellowCard>
 
-            {/* 6 */}
             <YellowCard>
-              
-              <YellowImg src={Brinjal} />
+              <YellowImg src={Kiwi2} alt="Kiwi" />
               <ContainerForPrice>
-              <h3 style={{fontFamily: "Signika, sans-serif" , fontWeight:"500", marginRight:"40px"}}>Brinjal</h3>
-               <ContainerForPriceColumn>
-              <OldPrice>$18.00</OldPrice>
-              <NewPrice>$16.00</NewPrice>
-              </ContainerForPriceColumn>
+                <h3 style={{fontFamily: "Signika, sans-serif", fontWeight: "500", marginRight: "40px"}}>Kiwi</h3>
+                <ContainerForPriceColumn>
+                  <OldPrice>$3.00</OldPrice>
+                  <NewPrice>$2.00</NewPrice>
+                </ContainerForPriceColumn>
               </ContainerForPrice>
             </YellowCard>
 
-            {/* 7 */}
-             <YellowCard>
-              
-              <YellowImg src={Banana} />
+            <YellowCard>
+              <YellowImg src={PurpleCabbage} alt="Purple Cabbage" />
               <ContainerForPrice>
-              <h3 style={{fontFamily: "Signika, sans-serif" , fontWeight:"500", marginRight:"40px"}}>Banana</h3>
-               <ContainerForPriceColumn>
-              <OldPrice>$45.00</OldPrice>
-              <NewPrice>$40.00</NewPrice>
-              </ContainerForPriceColumn>
+                <h3 style={{fontFamily: "Signika, sans-serif", fontWeight: "500", marginRight: "40px"}}>Purple Cabbage</h3>
+                <ContainerForPriceColumn>
+                  <OldPrice>$65.00</OldPrice>
+                  <NewPrice>$55.00</NewPrice>
+                </ContainerForPriceColumn>
               </ContainerForPrice>
             </YellowCard>
 
-            {/* 8 */}
-           <YellowCard>
-              
-              <YellowImg src={Watermelon} />
+            <YellowCard>
+              <YellowImg src={Brinjal} alt="Brinjal" />
               <ContainerForPrice>
-              <h3 style={{fontFamily: "Signika, sans-serif" , fontWeight:"500", marginRight:"40px"}}>Watermelon</h3>
-               <ContainerForPriceColumn>
-              <OldPrice>$30.00</OldPrice>
-              <NewPrice>$25.00</NewPrice>
-              </ContainerForPriceColumn>
+                <h3 style={{fontFamily: "Signika, sans-serif", fontWeight: "500", marginRight: "40px"}}>Brinjal</h3>
+                <ContainerForPriceColumn>
+                  <OldPrice>$18.00</OldPrice>
+                  <NewPrice>$16.00</NewPrice>
+                </ContainerForPriceColumn>
               </ContainerForPrice>
             </YellowCard>
 
+            <YellowCard>
+              <YellowImg src={Banana} alt="Banana" />
+              <ContainerForPrice>
+                <h3 style={{fontFamily: "Signika, sans-serif", fontWeight: "500", marginRight: "40px"}}>Banana</h3>
+                <ContainerForPriceColumn>
+                  <OldPrice>$45.00</OldPrice>
+                  <NewPrice>$40.00</NewPrice>
+                </ContainerForPriceColumn>
+              </ContainerForPrice>
+            </YellowCard>
+
+            <YellowCard>
+              <YellowImg src={Watermelon} alt="Watermelon" />
+              <ContainerForPrice>
+                <h3 style={{fontFamily: "Signika, sans-serif", fontWeight: "500", marginRight: "40px"}}>Watermelon</h3>
+                <ContainerForPriceColumn>
+                  <OldPrice>$30.00</OldPrice>
+                  <NewPrice>$25.00</NewPrice>
+                </ContainerForPriceColumn>
+              </ContainerForPrice>
+            </YellowCard>
           </YellowProducts>
         </YellowContentBox>
       </YellowSectionWrapper>
 
-      {/* OLD FARMING SECTION */}
-
-      
-
-      {/* <FarmingBenefits>
-        <BenefitCard>
-          <BenefitTitle>100% Organic</BenefitTitle>
-          <BenefitText>
-            We provide full support for eco-friendly farming methods and organic products.
-          </BenefitText>
-        </BenefitCard>
-
-        <BenefitCard>
-          <BenefitTitle>Fresh Products</BenefitTitle>
-          <BenefitText>
-            All our products are grown naturally without harmful chemicals.
-          </BenefitText>
-        </BenefitCard>
-
-        <BenefitCard>
-          <BenefitTitle>Modern Farming</BenefitTitle>
-          <BenefitText>
-            We help farmers implement modern & effective techniques for better yield.
-          </BenefitText>
-        </BenefitCard>
-      </FarmingBenefits> */}
-
-      {/* ---------------- TESTIMONIALS (starts below YellowSectionWrapper) ---------------- */}
       <TestimonialsWrapper>
         <TestiLeft>
           <TestiBadge>Testimonials</TestiBadge>
@@ -1195,13 +1772,13 @@ export default function Home3() {
 
         <TestiRight>
           <TestiCard>
-            <Stars src={StarRate} />
+            <Stars src={StarRate} alt="Stars rating" />
             <Quote>
-              “I would recommend practitioners at this center to everyone! They are great to work with and are excellent trainers. Thank you all!”
+              "I would recommend practitioners at this center to everyone! They are great to work with and are excellent trainers. Thank you all!"
             </Quote>
 
             <AuthorRow>
-              <Avatar src={StepHen} />
+              <Avatar src={StepHen} alt="Stephen" />
               <AuthorInfo>
                 <AuthorName>Stephen Welch</AuthorName>
                 <AuthorRole>Worker</AuthorRole>
@@ -1209,7 +1786,7 @@ export default function Home3() {
             </AuthorRow>
 
             <Dots>
-              <Dot style={{opacity:1}} />
+              <Dot active />
               <Dot />
               <Dot />
               <Dot />
@@ -1219,7 +1796,6 @@ export default function Home3() {
         </TestiRight>
       </TestimonialsWrapper>
 
-      {/* Logos / partners row (under testimonials) */}
       <LogosWrapper>
         <LogosRow>
           <LogoItem src={OrganicRiceIcon} alt="organic rice" />
@@ -1231,7 +1807,6 @@ export default function Home3() {
         </LogosRow>
       </LogosWrapper>
 
-      {/* Organic Vegetables hero (under logos) */}
       <HeroWrapper>
         <HeroInner>
           <HeroLeft src={VegHero} alt="organic vegetables" />
@@ -1248,7 +1823,6 @@ export default function Home3() {
         </HeroInner>
       </HeroWrapper>
 
-      {/* Latest posts & articles (under hero) */}
       <BlogSection>
         <BlogTop>
           <BlogHeading>Latest posts & articles</BlogHeading>
@@ -1260,7 +1834,7 @@ export default function Home3() {
 
         <BlogGrid>
           <BlogCard>
-            <BlogImg src={WhatTechnology} alt="post 1" />
+            <BlogImg src={WhatTechnology} alt="What technology is used in vertical farming?" />
             <BlogBody>
               <TagBadge>FOOD CROPS</TagBadge>
               <MetaRow>
@@ -1274,7 +1848,7 @@ export default function Home3() {
           </BlogCard>
 
           <BlogCard>
-            <BlogImg src={WhichType} alt="post 2" />
+            <BlogImg src={WhichType} alt="Which type of farming is more prevalent today?" />
             <BlogBody>
               <TagBadge>ORGANIC FARM</TagBadge>
               <MetaRow>
@@ -1288,7 +1862,7 @@ export default function Home3() {
           </BlogCard>
 
           <BlogCard>
-            <BlogImg src={TheFarmer} alt="post 3" />
+            <BlogImg src={TheFarmer} alt="The Farmers Sentiment Darkens Hopes Fade" />
             <BlogBody>
               <TagBadge>FARMING TIPS</TagBadge>
               <MetaRow>
@@ -1303,7 +1877,6 @@ export default function Home3() {
         </BlogGrid>
       </BlogSection>
 
-      {/* Yellow footer bar */}
       <FooterYellowWrapper>
         <FooterYellowContainer>
           <FooterNav>
@@ -1319,14 +1892,14 @@ export default function Home3() {
           <ContactGroup>
             <ContactItem>
               <IconCircle>
-                <img src={TelIcon} alt="phone" style={{width:18}} />
+                <img src={TelIcon} alt="phone" style={{width: 18}} />
               </IconCircle>
               <ContactText>+1(212) 255-511</ContactText>
             </ContactItem>
 
             <ContactItem>
               <IconCircle>
-                <img src={MailIcon} alt="mail" style={{width:18}} />
+                <img src={MailIcon} alt="mail" style={{width: 18}} />
               </IconCircle>
               <ContactText>noreply@pbminfotech.com</ContactText>
             </ContactItem>
@@ -1334,10 +1907,7 @@ export default function Home3() {
         </FooterYellowContainer>
       </FooterYellowWrapper>
 
-
-
       <Footer />
-
     </BigContainer>
   );
 }

@@ -16,6 +16,9 @@ import Blog from "../pages/blog/Blog";
 import ContactUs from "../pages/contactUs/ContactUs";
 import Portfolio2 from "../pages/portfolio/PortfolioGrid2";
 import ServiceDetails from "../pages/services/ServiceDetails";
+import Portfolio3 from "../pages/portfolio/PortfolioGrid3";
+import Portfolio4 from "../pages/portfolio/PortfolioGrid4";
+
 
 
 
@@ -38,6 +41,9 @@ const MainRoutes = () => {
     <Route path={ROUTES.BLOG} element={<Blog />} />
     <Route path={ROUTES.CONTACT} element={<ContactUs />} />\
     <Route path={ROUTES.PORTFOLIO2} element={<Portfolio2 />} />
+    <Route path={ROUTES.PORTFOLIO3} element={<Portfolio3 />} />
+    <Route path={ROUTES.PORTFOLIO4} element={<Portfolio4 />} />
+
     <Route path={ROUTES.SERVICEDETAILS} element={<ServiceDetails />} />
 
 
