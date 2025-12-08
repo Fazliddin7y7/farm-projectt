@@ -322,7 +322,7 @@ const ContactGroup = styled.div`
   margin-right:120px;
 `;
 
-const ContactItem = styled.div`
+const ContactItem = styled.div` 
   display: flex;
   gap: 12px;
   align-items: center;
